@@ -1,0 +1,27 @@
+{
+  "name": "uxele-exporter-local",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "karma start",
+    "test:human": "INTERACTIVE=true karma start",
+    "dev": "tsc -w",
+    "build": "rm -Rf ./build && tsc && cpx './src/**/*.js' ./build",
+    "dep:local": "node script/depLocal.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/file-saver": "^2.0.0",
+    "@types/sprintf-js": "^1.1.1",
+    "cpx": "^1.5.0",
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.2"
+  },
+  "dependencies": {
+    "file-saver": "^2.0.0",
+    "uxele-core": "git+https://github.com/uxele/uxele-core.git",
+    "uxele-i18n": "git+https://github.com/uxele/uxele-i18n.git"
+  }
+}
