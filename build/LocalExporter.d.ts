@@ -1,5 +1,6 @@
 import { IExporter } from "uxele-core";
 export declare class LocalExporter implements IExporter {
-    exportCanvas(canvas: HTMLCanvasElement, format: string, name: string, quality: number): Promise<void>;
-    exportSvg(svg: string, name: string): Promise<void>;
+    name: string;
+    iconCls: string;
+    exportBlob(blob: Blob, name: string): Promise<any>;
 }
